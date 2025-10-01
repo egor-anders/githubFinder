@@ -1,0 +1,50 @@
+:global {
+  body[data-theme='light'] {
+    --switcher-color: var(--gray-100);
+    --switcher-color-hover: var(--gray-300);
+  }
+
+  body[data-theme='dark'] {
+    --switcher-color: var(--white);
+    --switcher-color-hover: var(--gray-100);
+  }
+}
+
+.switcher {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid var(--switcher-color);
+  padding: 15px;
+  border-radius: 30px;
+  transition: 0.2s ease;
+
+  span {
+    color: var(--switcher-color);
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    transition: 0.2s ease;
+  }
+
+  svg {
+    transition: 0.2s ease;
+  }
+
+  &:hover {
+    span {
+      color: var(--switcher-color-hover);
+    }
+
+    svg {
+      fill: var(--switcher-color-hover);
+    }
+  }
+}
+
+.icon {
+  transition: 0.2s ease;
+  fill: var(--switcher-color);
+}
